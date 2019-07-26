@@ -12,6 +12,7 @@
 		337F89D422E9452A00E3E7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337F89D322E9452A00E3E7DB /* Assets.xcassets */; };
 		337F89D722E9452A00E3E7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F89D522E9452A00E3E7DB /* Main.storyboard */; };
 		337F89E022E945C700E3E7DB /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89DF22E945C700E3E7DB /* ImageSet.swift */; };
+		337F89E622EB58E500E3E7DB /* ImageDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89E522EB58E500E3E7DB /* ImageDownloaderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		337F89D922E9452A00E3E7DB /* XPC_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPC_App.entitlements; sourceTree = "<group>"; };
 		337F89DF22E945C700E3E7DB /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
 		337F89E122E9798100E3E7DB /* XPC App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "XPC App.entitlements"; sourceTree = "<group>"; };
+		337F89E522EB58E500E3E7DB /* ImageDownloaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,14 @@
 				337F89D922E9452A00E3E7DB /* XPC_App.entitlements */,
 			);
 			path = "XPC App";
+			sourceTree = "<group>";
+		};
+		337F89E422EB58BE00E3E7DB /* XPC Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				337F89E522EB58E500E3E7DB /* ImageDownloaderProtocol.swift */,
+			);
+			path = "XPC Protocols";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337F89E622EB58E500E3E7DB /* ImageDownloaderProtocol.swift in Sources */,
 				337F89E022E945C700E3E7DB /* ImageSet.swift in Sources */,
 				337F89D222E9452900E3E7DB /* ViewController.swift in Sources */,
 				337F89D022E9452900E3E7DB /* AppDelegate.swift in Sources */,

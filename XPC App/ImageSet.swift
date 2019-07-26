@@ -13,20 +13,32 @@ protocol ImageDisplayable: AnyObject {
 }
 
 class ImageSet {
-	let loader = ImageLoader()
+//	let loader = ImageLoader()
+	let imageDownloadConnection: NSXPCConnection = {
+		let connection = NSXPCConnection(serviceName: "com.redeggproductions.XPC-App-ImageDownloader")
+		connection.remoteObjectInterface = NSXPCInterface(with: ImageDownloaderProtocol.self)
+		connection.resume()
+		return connection
+	}()
+
 	weak var delegate: ImageDisplayable?
 	internal init() {
 		self.images = []
 
 		let array = ["https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-pro-select-hero-201711?wid=892&hei=820&&qlt=80&.v=1509566658416", "https://images.idgesg.net/images/article/2019/06/mac-pro-display-100798260-large.jpg"].map { URL(string: $0) }.compactMap { $0 }
 
+		guard let downloader = imageDownloadConnection.remoteObjectProxyWithErrorHandler ({ (error) in
+			NSLog("remote proxy error: \(error)")
+		}) as? ImageDownloaderProtocol else { return }
+
 		for url in array {
-			loader.retrieveImage(atURL: url) { (image) in
-				guard let image = image else {
+			downloader.downloadImage(at: url) { (imageData) in
+				guard let imageData = imageData, let image = NSImage(data: imageData) else {
 					print("escaped")
 					return
 				}
-				print(image)
+//				print(image)
+				print("got \(imageData.count) bytes")
 				self.images.append(image)
 				self.delegate?.imageWasLoaded()
 			}
