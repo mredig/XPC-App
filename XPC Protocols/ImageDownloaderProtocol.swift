@@ -9,5 +9,5 @@
 import Foundation
 
 @objc(ImageDownloaderProtocol) protocol ImageDownloaderProtocol {
-	func downloadImage(at url: URL, withReply completion: (Data?) -> Void)
+	func downloadImage(at url: URL, withReply completion: @escaping (Data?) -> Void)
 }

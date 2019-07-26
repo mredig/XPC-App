@@ -13,7 +13,6 @@ protocol ImageDisplayable: AnyObject {
 }
 
 class ImageSet {
-//	let loader = ImageLoader()
 	let imageDownloadConnection: NSXPCConnection = {
 		let connection = NSXPCConnection(serviceName: "com.redeggproductions.XPC-App-ImageDownloader")
 		connection.remoteObjectInterface = NSXPCInterface(with: ImageDownloaderProtocol.self)
@@ -37,7 +36,6 @@ class ImageSet {
 					print("escaped")
 					return
 				}
-//				print(image)
 				print("got \(imageData.count) bytes")
 				self.images.append(image)
 				self.delegate?.imageWasLoaded()
@@ -48,25 +46,25 @@ class ImageSet {
 	var images: [NSImage]
 }
 
-class ImageLoader {
-	let session: URLSession
-
-	init() {
-		let config = URLSessionConfiguration.default
-		session = URLSession(configuration: config)
-	}
-
-	func retrieveImage(atURL url: URL, completionHandler: @escaping (NSImage?) -> Void) {
-		let task = session.dataTask(with: url) { maybeData, response, error in
-			guard let data = maybeData else {
-				completionHandler(nil)
-				return
-			}
-			DispatchQueue.global().async {
-				let image = NSImage(data: data)
-				completionHandler(image)
-			}
-		}
-		task.resume()
-	}
-}
+//class ImageLoader {
+//	let session: URLSession
+//
+//	init() {
+//		let config = URLSessionConfiguration.default
+//		session = URLSession(configuration: config)
+//	}
+//
+//	func retrieveImage(atURL url: URL, completionHandler: @escaping (NSImage?) -> Void) {
+//		let task = session.dataTask(with: url) { maybeData, response, error in
+//			guard let data = maybeData else {
+//				completionHandler(nil)
+//				return
+//			}
+//			DispatchQueue.global().async {
+//				let image = NSImage(data: data)
+//				completionHandler(image)
+//			}
+//		}
+//		task.resume()
+//	}
+//}

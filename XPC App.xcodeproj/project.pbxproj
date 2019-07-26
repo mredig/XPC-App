@@ -7,15 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		335983C822EB6189000E7FB6 /* ImageDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89E522EB58E500E3E7DB /* ImageDownloaderProtocol.swift */; };
+		335983CA22EB61AC000E7FB6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335983C922EB61AC000E7FB6 /* main.swift */; };
+		335983CC22EB6269000E7FB6 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335983CB22EB6269000E7FB6 /* ImageDownloader.swift */; };
 		337F89D022E9452900E3E7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89CF22E9452900E3E7DB /* AppDelegate.swift */; };
 		337F89D222E9452900E3E7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89D122E9452900E3E7DB /* ViewController.swift */; };
 		337F89D422E9452A00E3E7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337F89D322E9452A00E3E7DB /* Assets.xcassets */; };
 		337F89D722E9452A00E3E7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F89D522E9452A00E3E7DB /* Main.storyboard */; };
 		337F89E022E945C700E3E7DB /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89DF22E945C700E3E7DB /* ImageSet.swift */; };
 		337F89E622EB58E500E3E7DB /* ImageDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89E522EB58E500E3E7DB /* ImageDownloaderProtocol.swift */; };
+		337F8A0A22EB5DFB00E3E7DB /* XPC-App-ImageDownloader.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 337F89FF22EB5DFB00E3E7DB /* XPC-App-ImageDownloader.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		337F8A0822EB5DFB00E3E7DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 337F89C422E9452900E3E7DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 337F89FE22EB5DFB00E3E7DB;
+			remoteInfo = "XPC-App-ImageDownloader";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		337F89FA22EB5D5D00E3E7DB /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				337F8A0A22EB5DFB00E3E7DB /* XPC-App-ImageDownloader.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		335983C922EB61AC000E7FB6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		335983CB22EB6269000E7FB6 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		337F89CC22E9452900E3E7DB /* XPC App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XPC App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		337F89CF22E9452900E3E7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		337F89D122E9452900E3E7DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,10 +56,19 @@
 		337F89DF22E945C700E3E7DB /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
 		337F89E122E9798100E3E7DB /* XPC App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "XPC App.entitlements"; sourceTree = "<group>"; };
 		337F89E522EB58E500E3E7DB /* ImageDownloaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderProtocol.swift; sourceTree = "<group>"; };
+		337F89FF22EB5DFB00E3E7DB /* XPC-App-ImageDownloader.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = "XPC-App-ImageDownloader.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		337F8A0722EB5DFB00E3E7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		337F89C922E9452900E3E7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F89FC22EB5DFB00E3E7DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,7 +81,9 @@
 		337F89C322E9452900E3E7DB = {
 			isa = PBXGroup;
 			children = (
+				337F89E422EB58BE00E3E7DB /* XPC Protocols */,
 				337F89CE22E9452900E3E7DB /* XPC App */,
+				337F8A0022EB5DFB00E3E7DB /* XPC-App-ImageDownloader */,
 				337F89CD22E9452900E3E7DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				337F89CC22E9452900E3E7DB /* XPC App.app */,
+				337F89FF22EB5DFB00E3E7DB /* XPC-App-ImageDownloader.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +120,16 @@
 			path = "XPC Protocols";
 			sourceTree = "<group>";
 		};
+		337F8A0022EB5DFB00E3E7DB /* XPC-App-ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				337F8A0722EB5DFB00E3E7DB /* Info.plist */,
+				335983C922EB61AC000E7FB6 /* main.swift */,
+				335983CB22EB6269000E7FB6 /* ImageDownloader.swift */,
+			);
+			path = "XPC-App-ImageDownloader";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,15 +140,34 @@
 				337F89C822E9452900E3E7DB /* Sources */,
 				337F89C922E9452900E3E7DB /* Frameworks */,
 				337F89CA22E9452900E3E7DB /* Resources */,
+				337F89FA22EB5D5D00E3E7DB /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				337F8A0922EB5DFB00E3E7DB /* PBXTargetDependency */,
 			);
 			name = "XPC App";
 			productName = "XPC App";
 			productReference = 337F89CC22E9452900E3E7DB /* XPC App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		337F89FE22EB5DFB00E3E7DB /* XPC-App-ImageDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337F8A0D22EB5E0100E3E7DB /* Build configuration list for PBXNativeTarget "XPC-App-ImageDownloader" */;
+			buildPhases = (
+				337F89FB22EB5DFB00E3E7DB /* Sources */,
+				337F89FC22EB5DFB00E3E7DB /* Frameworks */,
+				337F89FD22EB5DFB00E3E7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XPC-App-ImageDownloader";
+			productName = "XPC-App-ImageDownloader";
+			productReference = 337F89FF22EB5DFB00E3E7DB /* XPC-App-ImageDownloader.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -116,6 +187,9 @@
 							};
 						};
 					};
+					337F89FE22EB5DFB00E3E7DB = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 337F89C722E9452900E3E7DB /* Build configuration list for PBXProject "XPC App" */;
@@ -132,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				337F89CB22E9452900E3E7DB /* XPC App */,
+				337F89FE22EB5DFB00E3E7DB /* XPC-App-ImageDownloader */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +218,13 @@
 			files = (
 				337F89D422E9452A00E3E7DB /* Assets.xcassets in Resources */,
 				337F89D722E9452A00E3E7DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337F89FD22EB5DFB00E3E7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +242,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		337F89FB22EB5DFB00E3E7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				335983CA22EB61AC000E7FB6 /* main.swift in Sources */,
+				335983CC22EB6269000E7FB6 /* ImageDownloader.swift in Sources */,
+				335983C822EB6189000E7FB6 /* ImageDownloaderProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		337F8A0922EB5DFB00E3E7DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 337F89FE22EB5DFB00E3E7DB /* XPC-App-ImageDownloader */;
+			targetProxy = 337F8A0822EB5DFB00E3E7DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		337F89D522E9452A00E3E7DB /* Main.storyboard */ = {
@@ -292,6 +392,7 @@
 		337F89DD22E9452A00E3E7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "XPC App/XPC App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +412,7 @@
 		337F89DE22E9452A00E3E7DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "XPC App/XPC App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +425,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redeggproductions.XPC-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		337F8A0B22EB5DFB00E3E7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = "XPC-App-ImageDownloader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path",
+					/../../../../Frameworks,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redeggproductions.XPC-App-ImageDownloader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		337F8A0C22EB5DFB00E3E7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = "XPC-App-ImageDownloader/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path",
+					/../../../../Frameworks,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redeggproductions.XPC-App-ImageDownloader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -344,6 +484,15 @@
 			buildConfigurations = (
 				337F89DD22E9452A00E3E7DB /* Debug */,
 				337F89DE22E9452A00E3E7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		337F8A0D22EB5E0100E3E7DB /* Build configuration list for PBXNativeTarget "XPC-App-ImageDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337F8A0B22EB5DFB00E3E7DB /* Debug */,
+				337F8A0C22EB5DFB00E3E7DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
