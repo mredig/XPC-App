@@ -11,6 +11,7 @@
 		337F89D222E9452900E3E7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89D122E9452900E3E7DB /* ViewController.swift */; };
 		337F89D422E9452A00E3E7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337F89D322E9452A00E3E7DB /* Assets.xcassets */; };
 		337F89D722E9452A00E3E7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337F89D522E9452A00E3E7DB /* Main.storyboard */; };
+		337F89E022E945C700E3E7DB /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F89DF22E945C700E3E7DB /* ImageSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		337F89D622E9452A00E3E7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		337F89D822E9452A00E3E7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337F89D922E9452A00E3E7DB /* XPC_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPC_App.entitlements; sourceTree = "<group>"; };
+		337F89DF22E945C700E3E7DB /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
+		337F89E122E9798100E3E7DB /* XPC App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "XPC App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +56,10 @@
 		337F89CE22E9452900E3E7DB /* XPC App */ = {
 			isa = PBXGroup;
 			children = (
+				337F89E122E9798100E3E7DB /* XPC App.entitlements */,
 				337F89CF22E9452900E3E7DB /* AppDelegate.swift */,
 				337F89D122E9452900E3E7DB /* ViewController.swift */,
+				337F89DF22E945C700E3E7DB /* ImageSet.swift */,
 				337F89D322E9452A00E3E7DB /* Assets.xcassets */,
 				337F89D522E9452A00E3E7DB /* Main.storyboard */,
 				337F89D822E9452A00E3E7DB /* Info.plist */,
@@ -95,6 +100,11 @@
 				TargetAttributes = {
 					337F89CB22E9452900E3E7DB = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -133,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337F89E022E945C700E3E7DB /* ImageSet.swift in Sources */,
 				337F89D222E9452900E3E7DB /* ViewController.swift in Sources */,
 				337F89D022E9452900E3E7DB /* AppDelegate.swift in Sources */,
 			);
@@ -271,7 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "XPC App/XPC_App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "XPC App/XPC App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
@@ -290,7 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "XPC App/XPC_App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "XPC App/XPC App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
