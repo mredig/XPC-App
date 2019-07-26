@@ -45,26 +45,3 @@ class ImageSet {
 
 	var images: [NSImage]
 }
-
-//class ImageLoader {
-//	let session: URLSession
-//
-//	init() {
-//		let config = URLSessionConfiguration.default
-//		session = URLSession(configuration: config)
-//	}
-//
-//	func retrieveImage(atURL url: URL, completionHandler: @escaping (NSImage?) -> Void) {
-//		let task = session.dataTask(with: url) { maybeData, response, error in
-//			guard let data = maybeData else {
-//				completionHandler(nil)
-//				return
-//			}
-//			DispatchQueue.global().async {
-//				let image = NSImage(data: data)
-//				completionHandler(image)
-//			}
-//		}
-//		task.resume()
-//	}
-//}
