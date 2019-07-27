@@ -8,6 +8,6 @@
 
 import Foundation
 
-@objc(ImageDownloaderProtocol) protocol ImageDownloaderProtocol {
+@objc protocol ImageDownloaderProtocol {
 	func downloadImage(at url: URL, withReply completion: @escaping (Data?) -> Void)
 }
